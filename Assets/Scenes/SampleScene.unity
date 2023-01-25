@@ -585,7 +585,8 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 0}
+  m_ModelPrefab: {fileID: 4337838323912718255, guid: f09412157a172b94e8217e99bcfb0d1b,
+    type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -1124,75 +1125,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54af6c1189ee844a87f0b5bc0b0ebad, type: 3}
---- !u!1001 &606134215
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3453268900264797792, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_Name
-      value: ButtonChecker2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3453268900264797803, guid: b7b25c72a99ee894ab21f469443d85f1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b7b25c72a99ee894ab21f469443d85f1, type: 3}
 --- !u!1 &706329234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +1936,8 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 0}
+  m_ModelPrefab: {fileID: 6787441937611982384, guid: 1d6090299647b4c4fb4e996349c69e9d,
+    type: 3}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
