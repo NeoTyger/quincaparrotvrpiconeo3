@@ -44,6 +44,9 @@ public class ButtonCheckerInteractable : XRBaseInteractable
     
     private void PrimaryButtonPressed(InputAction.CallbackContext context)
     {
-        GetComponent<PlaceHolderChecker>().CheckObjectsPlacedInPedestals();
+        if (base.isHovered)
+        {
+          GetComponent<PlaceHolderChecker>().CheckObjectsPlacedInPedestals();  
+        }
     }
 }
