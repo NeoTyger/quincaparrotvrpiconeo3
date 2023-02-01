@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,63 +19,101 @@ public class PlaceHolderChecker : MonoBehaviour
         _blinkCheck = FindObjectOfType<BlinkCheck>();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Button"))
+        {
+            CheckObjectsPlacedInPedestals();
+        }
+    }
+
+    public void CheckObjectsPlacedInPedestals()
+    {
+        if (objectPlaced[0])
+        {
+            placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.green;
+        }
+        else
+        {
+            placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+        
+        if (objectPlaced[1])
+        {
+            placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.green;
+        }
+        else
+        {
+            placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+        
+        if (objectPlaced[2])
+        {
+            placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.green;
+        }
+        else
+        {
+            placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,
-                    pickupRange))
-            {
-                if (hit.transform.CompareTag("Button") && _gameManager.win.Value != true)
-                {
-                    _blinkCheck.buttonHit = true;
-                    StartCoroutine(button(hit.transform));
-                    if (objectPlaced[0])
-                    {
-                        placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.green;
-                    }
-                    else
-                    {
-                        placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.red;
-                    }
-                    
-                    if (objectPlaced[1])
-                    {
-                        placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.green;
-                    }
-                    else
-                    {
-                        placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.red;
-                    }
-                    
-                    if (objectPlaced[2])
-                    {
-                        placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.green;
-                    }
-                    else
-                    {
-                        placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.red;
-                    }
-
-
-                    if (objectPlaced[0] && objectPlaced[1] && objectPlaced[2])
-                    {
-                        _gameManager.win.Value = true;
-                        _gameManager.EndGame();
-                    }
-                    else
-                    {
-                        _gameManager.points -= 200;
-                        if (_gameManager.points <= 0)
-                        {
-                            _gameManager.points = 0;
-                        }
-                    }
-                }
-            }
-        }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit,
+        //             pickupRange))
+        //     {
+        //         if (hit.transform.CompareTag("Button") && _gameManager.win.Value != true)
+        //         {
+        //             _blinkCheck.buttonHit = true;
+        //             StartCoroutine(button(hit.transform));
+        //             if (objectPlaced[0])
+        //             {
+        //                 placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.green;
+        //             }
+        //             else
+        //             {
+        //                 placeHolders[0].GetComponent<MeshRenderer>().material.color = Color.red;
+        //             }
+        //             
+        //             if (objectPlaced[1])
+        //             {
+        //                 placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.green;
+        //             }
+        //             else
+        //             {
+        //                 placeHolders[1].GetComponent<MeshRenderer>().material.color = Color.red;
+        //             }
+        //             
+        //             if (objectPlaced[2])
+        //             {
+        //                 placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.green;
+        //             }
+        //             else
+        //             {
+        //                 placeHolders[2].GetComponent<MeshRenderer>().material.color = Color.red;
+        //             }
+        //
+        //
+        //             if (objectPlaced[0] && objectPlaced[1] && objectPlaced[2])
+        //             {
+        //                 _gameManager.win.Value = true;
+        //                 _gameManager.EndGame();
+        //             }
+        //             else
+        //             {
+        //                 _gameManager.points -= 200;
+        //                 if (_gameManager.points <= 0)
+        //                 {
+        //                     _gameManager.points = 0;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     IEnumerator button(Transform transform)

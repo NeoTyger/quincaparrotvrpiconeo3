@@ -240,7 +240,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr.picoxr": {
-      "version": "file:C:/Users/n3oti/Downloads",
+      "version": "file:C:/Users/JLCardona/Desktop",
       "depth": 0,
       "source": "local",
       "dependencies": {
